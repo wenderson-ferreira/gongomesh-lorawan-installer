@@ -102,7 +102,7 @@ fi
 # Build LoRa gateway app
 if [ ! -d lora_gateway_legacy ]; then
     git clone  https://github.com/wenderson-ferreira/lora_gateway_legacy.git
-    pushd lora_gatewaylegacy
+    pushd lora_gateway_legacy
 else
     pushd lora_gateway_legacy
     git fetch origin
