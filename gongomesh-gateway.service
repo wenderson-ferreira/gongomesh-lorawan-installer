@@ -1,0 +1,12 @@
+[Unit]
+Description=Gongomesh LoRaWAN Gateway
+
+[Service]
+WorkingDirectory=/opt/gongomesh-gateway/bin/
+ExecStart=/opt/gongomesh-gateway/bin/start.sh
+SyslogIdentifier=gongomesh-gateway
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
