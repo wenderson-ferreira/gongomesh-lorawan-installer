@@ -101,12 +101,12 @@ fi
 
 # Build LoRa gateway app
 if [ ! -d lora_gateway_legacy ]; then
-    git clone -b legacy https://github.com/wenderson-ferreira/lora_gateway_legacy.git
+    git clone  https://github.com/wenderson-ferreira/lora_gateway_legacy.git
     pushd lora_gatewaylegacy
 else
     pushd lora_gateway_legacy
     git fetch origin
-    git checkout legacy
+    git checkout main
     git reset --hard
 fi
 
@@ -119,12 +119,12 @@ popd
 
 # Build packet forwarder
 if [ ! -d packet_forwarder_legacy ]; then
-    git clone -b legacy https://github.com/wenderson-ferreira/packet_forwarder_legacy.git
+    git clone  https://github.com/wenderson-ferreira/packet_forwarder_legacy.git
     pushd packet_forwarder_legacy
 else
     pushd packet_forwarder_legacy
     git fetch origin
-    git checkout legacy
+    git checkout main
     git reset --hard
 fi
 
@@ -164,7 +164,7 @@ else
     \n\t\"antenna_gain\": 0,
     \n\t\"radio_0\": {
     \n\t\t\"enable\": true,
-    \n\t\t\"type\": "SX1257",
+    \n\t\t\"type\": \"SX1257\",
     \n\t\t\"freq\": 917200000,
     \n\t\t\"rssi_offset\": -166,
     \n\t\t\"tx_enable\": true,
@@ -173,7 +173,7 @@ else
     \n},
     \n\t\"radio_1\": {
     \n\t\t\"enable\": true,
-    \n\t\t\"type\": "SX1257",
+    \n\t\t\"type\": \"SX1257\",
     \n\t\t\"freq\": 917900000,
     \n\t\t\"rssi_offset\": -166,
     \n\t\t\"tx_enable\": false
